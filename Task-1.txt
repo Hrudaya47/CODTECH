@@ -1,0 +1,43 @@
+def check password strength(password):
+#Length criteria
+length_criteria len(password) >= 8
+#Complexity criteria
+has_upper re.search(r[A-Z]', password) is not None
+has_lowerre.search(r' [a-z]', password) is not None
+has_digit re.search(r'\d", password) is not None
+has_special re.search(r[!@#$%^&*(),.?": {}[<>]', password) is dot None
+#Uniqueness criteria
+unique_char's len(set(password))
+uniqueness_criteria unique_chars / len(password) > 0.5
+#Strength score calculation
+strength_score sum([length_criteria, has_upper, has lower, has_digit, has_special, uniqueness_criteria])
+#Strength feedback
+feedback "Password strength:
+if strength score < 3:
+feedback +- "Weak"
+elif strength_score < 5:
+feedback - "Moderate"
+else:
+feedback +- "strong"
+return {
+"length_criteria": length_criteria,
+"has_upper": has_upper,
+"has_lower": has_lower,
+"has_digit": has_digit,
+"has_special": has_special,
+"uniqueness criteria": uniqueness criteria,
+"strength_score": strength_score,
+"feedback": feedback
+}
+#Example usage
+password input("Enter a password to check its strength: ")
+result check_password_strength(password)
+print("Password Analysis:")
+print("Length Criteria Met: (result['length_criteria']]")
+print(f"Contains Uppercase Letters: {result['has_upper']}")
+print("Contains Lowercase Letters: (result['has_lower']}")
+print(f"Contains Digits: {result['has_digit']}")
+print("Contains Special Characters: {result['has special']}")
+print("Uniqueness Criteria Met: (result['uniqueness_criteria"]}")
+print("Strength score: (result['strength_score']]")
+print(f"Feedback: (result['feedback"]}")
